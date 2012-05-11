@@ -18,6 +18,12 @@ $ cisco_decrypt path_to_pcf_file_or_encrypted_String
 # decrypted_string
 ```
 
+## Installation
+
+```bash
+  $ gem install cisco_decrypt
+```
+
 ## Dependecies
 
 * libgcrypt
