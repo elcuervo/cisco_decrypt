@@ -8,4 +8,8 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://github.com/elcuervo/cisco_decrypt'
   s.files       = Dir.glob('lib/**/*.rb') + Dir.glob('ext/**/*.{c,h,rb}')
   s.extensions  = ['ext/cisco_decrypt/extconf.rb']
+  s.executables = 'cisco_decrypt'
+
+  s.add_dependency('inifile')
+  s.add_development_dependency('cutest')
 end

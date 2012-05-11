@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require 'cisco_decrypt'
+
+ARGV.each do |command|
+  if File.exists?(File.expand_path(command))
+    CiscoDecrypt.from_pcf command
+  else
+    puts CiscoDecrypt.decrypt_string command
+  end
+end

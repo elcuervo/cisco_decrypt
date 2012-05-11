@@ -133,12 +133,12 @@ char *decrypt(char *shared)
 
 	ret = hex2bin(shared, &bin, &len);
 	if (ret != 0) {
-		perror("decoding input");
+                rb_raise(rb_eStandardError, "Error decoding string");
 	}
 	ret = c_decrypt(bin, len, &pw, NULL);
 	free(bin);
 	if (ret != 0) {
-		perror("decrypting input");
+                rb_raise(rb_eStandardError, "Error decrypting string");
 	}
         return pw;
 	free(pw);
